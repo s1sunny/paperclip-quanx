@@ -1,0 +1,137 @@
+{
+  "name": "Paperclip · 签到+Cookie 合集",
+  "description": "聚合自 MaYIHEI/paperclip（脚本 URL 直指上游，作者更新自动生效）。task[].config = 31 个在用签到定时任务（含 11:30 汇总）；每条 task 的 addons 挂对应脚本自己的重写 conf（无重写的脚本不挂）。数据存 BoxJS：添加 paperclip.boxjs.json 数据源。抓 Cookie 时开本订阅进 App/小程序，抓完可关（重写规则即停，签到不影响）。",
+  "task": [
+    {
+      "config": "0 9 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/agentrouter/agentrouter.js, tag=AgentRouter签到, img-url=https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/agentrouter/icon.png, enabled=true"
+    },
+    {
+      "config": "15 8 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/baidunetdisk/baidunetdisk.js, tag=百度网盘签到, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/baidunetdisk.png, enabled=true",
+      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/app/baidunetdisk.conf, tag=百度网盘签到-重写"
+    },
+    {
+      "config": "15 10 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/camscanner/camscanner.js, tag=扫描全能王签到, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/camscanner.png, enabled=true",
+      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/app/camscanner.conf, tag=扫描全能王签到-重写"
+    },
+    {
+      "config": "33 8 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/dreame/dreame.js, tag=追觅签到, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/dreame.png, enabled=true",
+      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/app/dreame.conf, tag=追觅签到-重写"
+    },
+    {
+      "config": "40 8 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/laifen/laifen.js, tag=徕芬签到, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/laifen.png, enabled=true",
+      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/app/laifen.conf, tag=徕芬签到-重写"
+    },
+    {
+      "config": "0-59/19 8-10 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/lhtj/lhtj.js, tag=龙湖App签到, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/lhtj.png, enabled=true",
+      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/app/lhtj.conf, tag=龙湖App签到-重写"
+    },
+    {
+      "config": "33 8 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/linghu/linghu.js, tag=灵狐灵购签到, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/linghu.png, enabled=true",
+      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/app/linghu.conf, tag=灵狐灵购签到-重写"
+    },
+    {
+      "config": "13 6 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/mihoyo/mihoyo.js, tag=米游社签到, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/mihoyo.png, enabled=true",
+      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/app/mihoyo.conf, tag=米游社签到-重写"
+    },
+    {
+      "config": "30 8 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/milottery/milottery.js, tag=小米抽奖签到, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/mishop.png, enabled=true",
+      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/app/milottery.conf, tag=小米抽奖签到-重写"
+    },
+    {
+      "config": "15 8 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/mishop/mishop.js, tag=小米商城签到, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/mishop.png, enabled=true",
+      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/app/mishop.conf, tag=小米商城签到-重写"
+    },
+    {
+      "config": "37 8 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/newmixc/newmixc.js, tag=一点万象签到, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/newmixc.png, enabled=true",
+      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/app/newmixc.conf, tag=一点万象签到-重写"
+    },
+    {
+      "config": "0 8 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/nodeseek/nodeseek.js, tag=NodeSeek签到, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/nodeseek.png, enabled=true",
+      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/app/nodeseek.conf, tag=NodeSeek签到-重写"
+    },
+    {
+      "config": "10 8 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/pan1/pan1.js, tag=123社区签到, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/pan1.png, enabled=true",
+      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/app/pan1.conf, tag=123社区签到-重写"
+    },
+    {
+      "config": "30 7 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/qqmusic/qqmusic.js, tag=QQ音乐每日任务, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/qqmusic.png, enabled=true",
+      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/app/qqmusic.conf, tag=QQ音乐每日任务-重写"
+    },
+    {
+      "config": "* 9-10 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/qqmusic/qqmusic.js?cron=coin, tag=QQ音乐定时金币, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/qqmusic.png, enabled=true"
+    },
+    {
+      "config": "5 0,8,12,16,20,22 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/qqmusic/qqmusic.js?cron=redpacket, tag=QQ音乐红包雨, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/qqmusic.png, enabled=true"
+    },
+    {
+      "config": "30 8 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/sgcc/sgcc.js, tag=网上国网签到, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/sgcc.png, enabled=true"
+    },
+    {
+      "config": "10 0 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/tenvideo/tenvideo.js, tag=腾讯视频签到, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/tenvideo.png, enabled=true",
+      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/app/tenvideo.conf, tag=腾讯视频签到-重写"
+    },
+    {
+      "config": "20 9 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/tingtingfm/tingtingfm.js, tag=听听FM签到, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/tingtingfm.png, enabled=true",
+      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/app/tingtingfm.conf, tag=听听FM签到-重写"
+    },
+    {
+      "config": "20 9 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/wanda/wanda.js, tag=万达电影签到, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/wanda.png, enabled=true",
+      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/app/wanda.conf, tag=万达电影签到-重写"
+    },
+    {
+      "config": "0 8 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/weibotalk/weibotalk.js, tag=微博超话签到, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/weibo.png, enabled=true",
+      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/app/weibotalk.conf, tag=微博超话签到-重写"
+    },
+    {
+      "config": "0 10 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/wps/wps.js, tag=WPS签到, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/wps.png, enabled=true",
+      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/app/wps.conf, tag=WPS签到-重写"
+    },
+    {
+      "config": "5 9 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/youpin/youpin.js, tag=有品签到, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/youpin.png, enabled=true",
+      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/app/youpin.conf, tag=有品签到-重写"
+    },
+    {
+      "config": "8 8 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/miniprogram/bhg/bhg.js, tag=北京华联签到小程序, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/bhg.png, enabled=true",
+      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/miniprogram/bhg.conf, tag=北京华联签到小程序-重写"
+    },
+    {
+      "config": "23 7 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/miniprogram/haidilao/haidilao.js, tag=海底捞签到小程序, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/haidilao.png, enabled=true",
+      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/miniprogram/haidilao.conf, tag=海底捞签到小程序-重写"
+    },
+    {
+      "config": "5 0 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/miniprogram/huisheng/huisheng.js, tag=惠省红包墙签到小程序, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/huisheng.png, enabled=true",
+      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/miniprogram/huisheng.conf, tag=惠省红包墙签到小程序-重写"
+    },
+    {
+      "config": "0 9 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/miniprogram/lhtj/lhtj.js, tag=龙湖天街签到小程序, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/lhtj.png, enabled=true",
+      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/miniprogram/lhtj.conf, tag=龙湖天街签到小程序-重写"
+    },
+    {
+      "config": "0 10 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/miniprogram/linli/linli.js, tag=林里签到小程序, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/linli.png, enabled=true",
+      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/miniprogram/linli.conf, tag=林里签到小程序-重写"
+    },
+    {
+      "config": "5 8 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/miniprogram/longde/longde.js, tag=龙德广场签到小程序, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/longde.png, enabled=true",
+      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/miniprogram/longde.conf, tag=龙德广场签到小程序-重写"
+    },
+    {
+      "config": "37 7 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/miniprogram/miniso/miniso.js, tag=名创优品签到小程序, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/miniso.png, enabled=true",
+      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/miniprogram/miniso.conf, tag=名创优品签到小程序-重写"
+    },
+    {
+      "config": "0 9 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/miniprogram/ppmt/ppmt.js, tag=泡泡玛特签到小程序, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/popmart.png, enabled=true",
+      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/miniprogram/ppmt.conf, tag=泡泡玛特签到小程序-重写"
+    },
+    {
+      "config": "17 7 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/miniprogram/tuhu/tuhu.js, tag=途虎养车签到小程序, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/tuhu.png, enabled=true",
+      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/miniprogram/tuhu.conf, tag=途虎养车签到小程序-重写"
+    },
+    {
+      "config": "10 8 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/miniprogram/wedome/wedome.js, tag=味多美签到小程序, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/wedome.png, enabled=true",
+      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/miniprogram/wedome.conf, tag=味多美签到小程序-重写"
+    },
+    {
+      "config": "30 11 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/summary/summary.js, tag=签到汇总, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/paperclip-checkin.png, enabled=true"
+    }
+  ]
+}
