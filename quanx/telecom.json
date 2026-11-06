@@ -1,0 +1,10 @@
+{
+  "name": "电信 · Token 抓取与推送",
+  "description": "抓取 App Token 与超高清凭据，合并推送至青龙变量 chinaTelecomToken。首次使用请先在 BoxJS 配置 ql_url / ql_token，并启用推送任务。",
+  "task": [
+    {
+      "config": "30 8 * * * https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/scripts/telecom/push.js, tag=电信Token推送, enabled=false",
+      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/telecom.conf, tag=电信Token捕获"
+    }
+  ]
+}

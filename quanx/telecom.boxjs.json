@@ -1,0 +1,104 @@
+{
+  "id": "s1sunny.paperclip.telecom",
+  "name": "Paperclip · 电信",
+  "author": "@s1sunny",
+  "repo": "https://github.com/s1sunny/paperclip-quanx",
+  "apps": [
+    {
+      "id": "telecom_ql_sync",
+      "name": "中国电信",
+      "keys": [
+        "ql_url",
+        "ql_client_id",
+        "ql_client_secret",
+        "ql_token",
+        "chinatelecom_ql_name",
+        "chinatelecom_accounts",
+        "chinatelecom_phones",
+        "chinatelecom_tv189"
+      ],
+      "settings": [
+        {
+          "id": "ql_url",
+          "name": "青龙面板地址",
+          "val": "",
+          "type": "text",
+          "placeholder": "http://192.168.1.100:5700",
+          "desc": "含端口，不含末尾斜杠"
+        },
+        {
+          "id": "ql_client_id",
+          "name": "青龙 Client ID",
+          "val": "",
+          "type": "text",
+          "placeholder": "青龙→系统设置→应用设置→新建应用"
+        },
+        {
+          "id": "ql_client_secret",
+          "name": "青龙 Client Secret",
+          "val": "",
+          "type": "text",
+          "placeholder": "创建应用时显示的 Secret"
+        },
+        {
+          "id": "ql_token",
+          "name": "青龙 API Token",
+          "val": "",
+          "type": "text",
+          "placeholder": "青龙 API 令牌"
+        },
+        {
+          "id": "chinatelecom_ql_name",
+          "name": "青龙变量名",
+          "val": "chinaTelecomToken",
+          "type": "text",
+          "placeholder": "chinaTelecomToken"
+        },
+        {
+          "id": "chinatelecom_phones",
+          "name": "📱 账号列表",
+          "val": "（抓取后自动显示）",
+          "type": "textarea",
+          "rows": 5,
+          "desc": "自动维护"
+        },
+        {
+          "id": "chinatelecom_tv189",
+          "name": "📺 超高清凭据",
+          "val": "（抓取后自动显示）",
+          "type": "textarea",
+          "rows": 3,
+          "desc": "自动维护"
+        },
+        {
+          "id": "chinatelecom_accounts",
+          "name": "账号数据（内部）",
+          "val": "",
+          "type": "textarea",
+          "rows": 3,
+          "desc": "自动维护，请勿手改"
+        }
+      ],
+      "author": "@s1sunny",
+      "repo": "https://github.com/s1sunny/paperclip-quanx",
+      "script": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/scripts/telecom/capture.js",
+      "icons": []
+    },
+    {
+      "id": "telecom_ql_push",
+      "name": "电信Token推送青龙",
+      "keys": [
+        "ql_url",
+        "ql_token",
+        "chinatelecom_ql_name",
+        "chinatelecom_accounts",
+        "chinatelecom_phones"
+      ],
+      "settings": [],
+      "author": "@s1sunny",
+      "repo": "https://github.com/s1sunny/paperclip-quanx",
+      "script": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/scripts/telecom/push.js",
+      "icons": []
+    }
+  ]
+}
