@@ -132,10 +132,6 @@
     },
     {
       "config": "30 11 * * * https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/summary/summary.js, tag=签到汇总, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/paperclip-checkin.png, enabled=true"
-    },
-    {
-      "config": "30 8 * * * https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/scripts/telecom/push.js, tag=电信Token推送, enabled=false",
-      "addons": "https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/quanx/conf/telecom.conf, tag=电信Token捕获"
     }
   ]
 }
