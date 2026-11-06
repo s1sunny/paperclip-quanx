@@ -9,7 +9,7 @@
     quanx/conf/app/*.conf         # App 脚本重写规则（一脚本一 conf）
     quanx/conf/miniprogram/*.conf # 小程序脚本重写规则（一脚本一 conf）
 """
-import json, re, subprocess, os, datetime
+import json, re, subprocess, os, sys, datetime
 
 UPSTREAM = "https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/"
 # 在用脚本清单: 以作者 loon/paperclip-checkin/paperclip-checkin.lpx 内的 cron 引用为准
@@ -34,6 +34,15 @@ URL_QUERY = {
     ("app/qqmusic/qqmusic.js", "QQ音乐定时金币"): "?cron=coin",
     ("app/qqmusic/qqmusic.js", "QQ音乐红包雨"): "?cron=redpacket",
 }
+# 本仓库自有条目（非上游聚合，重跑时追加在末尾）
+LOCAL_TASKS = [
+    {
+        "config": ("30 8 * * * https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/"
+                   "scripts/telecom/push.js, tag=电信Token推送, enabled=false"),
+        "addons": ("https://raw.githubusercontent.com/s1sunny/paperclip-quanx/refs/heads/main/"
+                   "quanx/conf/telecom.conf, tag=电信Token捕获"),
+    },
+]
 
 def fetch(path):
     return subprocess.run(["curl", "-s", UPSTREAM + path],
@@ -146,6 +155,8 @@ def main():
             entry["addons"] = conf_url
             addons_done.add(skey)
         entries.append(entry)
+
+    entries.extend(LOCAL_TASKS)
 
     sub = {
         "name": "Paperclip · 签到+Cookie 合集",
